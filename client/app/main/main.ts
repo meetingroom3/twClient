@@ -1,3 +1,5 @@
+/// <reference path="../../typings/tsd.d.ts"/>
+
 'use strict';
 
 angular.module('twClientApp')
@@ -6,7 +8,5 @@ angular.module('twClientApp')
       .state('main', {
         url: '/',
         templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
       });
   });

@@ -1,3 +1,5 @@
+/// <reference path="../typings/tsd.d.ts"/>
+
 'use strict';
 
 angular.module('twClientApp', [
@@ -5,7 +7,6 @@ angular.module('twClientApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'btford.socket-io',
   'ui.router',
   'ui.bootstrap'
 ])
