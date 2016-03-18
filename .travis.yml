@@ -10,3 +10,7 @@ before_script:
   - gem install sass
   - bower install
 services: mongodb
+deploy:
+  provider: heroku
+  app: twclient
+  api_key: "d70af397-0ed2-424d-9a97-0f7503efeff0"
