@@ -415,6 +415,12 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.client %>',
         dest: '.tmp/',
         src: ['app/app.constant.js']
+      },
+      test: {
+        expand: true,
+        cwd: '<%= yeoman.client %>',
+        dest: '.tmp/test/',
+        src: ['{app,components}/**/*.spec.js']
       }
     },
 
@@ -453,6 +459,7 @@ module.exports = function (grunt) {
         'sass',
       ],
       test: [
+        'copy:test',
         'ts:client',
         'copy:constant',
         'ts:client_test',
