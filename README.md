@@ -2,6 +2,8 @@
 
 This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.3.0.
 
+[![Build Status](https://travis-ci.org/meetingroom3/twClient.svg?branch=master)](https://travis-ci.org/meetingroom3/twClient)
+
 ## Getting Started
 
 ### Prerequisites
