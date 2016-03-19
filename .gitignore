@@ -9,3 +9,4 @@ dist
 npm-debug.log
 coverage
 .tscache/
+client/test_typings/

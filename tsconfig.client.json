@@ -10,6 +10,7 @@
     ],
     "files": [
         "client/app/app.ts",
+        "client/app/factory/oauthService/oauthService.ts",
         "client/app/factory/test/testService.ts",
         "client/app/main/main.ts",
         "client/components/footer/footer.directive.ts",
