@@ -416,12 +416,12 @@ module.exports = function (grunt) {
         dest: '.tmp/',
         src: ['app/app.constant.js']
       },
-      test: {
-        expand: true,
-        cwd: '<%= yeoman.client %>',
-        dest: '.tmp/test/',
-        src: ['{app,components}/**/*.spec.js']
-      }
+      //test: {
+      //  expand: true,
+      //  cwd: '<%= yeoman.client %>',
+      //  dest: '.tmp/test/',
+      //  src: ['{app,components}/**/*.spec.js']
+      //}
     },
 
     buildcontrol: {
@@ -459,7 +459,7 @@ module.exports = function (grunt) {
         'sass',
       ],
       test: [
-        'copy:test',
+        //'copy:test',
         'ts:client',
         'copy:constant',
         'ts:client_test',
@@ -568,14 +568,18 @@ module.exports = function (grunt) {
     babel: {
       options: {
         sourceMap: true,
-        optional: [
-          'es7.classProperties'
-        ]
+        presets: ['es2015']
       },
-      server: {
-        options: {
-          optional: ['runtime']
-        },
+      test: {
+        files: [{
+          "expand": true,
+          "cwd": "<%= yeoman.client %>",
+          "src": ["{app,components}/**/*.spec.js"],
+          "dest": ".tmp/test/",
+          "ext": ".js"
+        }]
+      },
+      dist: {
         files: [{
           expand: true,
           cwd: '<%= yeoman.server %>',
@@ -779,6 +783,7 @@ module.exports = function (grunt) {
         'injector',
         'postcss',
         'wiredep:test',
+        'babel:test',
         'karma'
       ]);
     }
@@ -869,7 +874,7 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
-    'babel:server',
+    'babel:dist',
     'cdnify',
     'cssmin',
     'uglify',
