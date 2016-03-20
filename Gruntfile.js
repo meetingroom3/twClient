@@ -67,7 +67,7 @@ module.exports = function (grunt) {
       },
       injectJS: {
         files: [
-          '<%= yeoman.client %>/{app,components}/**/!(*.spec|*.mock).ts',
+          '<%= yeoman.client %>/{app,components}/**/!(*.spec|*.mock).{js,ts}',
           '!<%= yeoman.client %>/app/app.js'
         ],
         tasks: ['injector:scripts']
@@ -579,6 +579,15 @@ module.exports = function (grunt) {
           "ext": ".js"
         }]
       },
+      client: {
+        files: [{
+          "expand": true,
+          "cwd": "<%= yeoman.client %>",
+          "src": ["{app,components}/**/*.{service,directive}.js"],
+          "dest": ".tmp/",
+          "ext": ".js"
+        }]
+      },
       dist: {
         files: [{
           expand: true,
@@ -656,7 +665,7 @@ module.exports = function (grunt) {
         files: {
           '<%= yeoman.client %>/index.html': [
                [
-                 '<%= yeoman.client %>/{app,components}/**/!(*.spec|*.mock).ts',
+                 '<%= yeoman.client %>/{app,components}/**/!(*.spec|*.mock).{js,ts}',
                  '<%= yeoman.client %>/app/app.constant.js',
                  '!{.tmp,<%= yeoman.client %>}/app/app.{js,ts}'
                ]
@@ -784,6 +793,7 @@ module.exports = function (grunt) {
         'postcss',
         'wiredep:test',
         'babel:test',
+        'babel:client',
         'karma'
       ]);
     }
@@ -874,6 +884,7 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
+    'babel:client',
     'babel:dist',
     'cdnify',
     'cssmin',
