@@ -10,5 +10,9 @@ angular.module('twClientApp')
       .state('main', {
         url: '/',
         templateUrl: 'app/main/main.html',
-      });
+      })
+      .state('index', {
+        url: '/index',
+        templateUrl: 'app/index.html',
+      });;
   });
