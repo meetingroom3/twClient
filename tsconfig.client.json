@@ -11,9 +11,10 @@
     "files": [
         "client/app/app.ts",
         "client/app/factory/test/testService.service.ts",
+        "client/app/factory/userService/userService.service.ts",
         "client/app/main/main.rooter.ts",
-        "client/app/test/test.directive.ts",
         "client/components/footer/footer.directive.ts",
+        "client/components/login/login.directive.ts",
         "client/typings/angularjs/angular.d.ts",
         "client/typings/jquery/jquery.d.ts",
         "client/typings/lodash/lodash.d.ts",
