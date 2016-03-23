@@ -4,13 +4,13 @@ namespace twClientApp {
 
   'use strict';
 
-  export class userController {
+  export class UserController {
     static $inject = ['appConfig'];
     constructor(public APP_CONF) {
     }
 
     public getOauthIoServiceId():string {
-      return this.APP_CONF.oauthServiceId;
+      return this.APP_CONF.userServiceId;
     }
   }
 
