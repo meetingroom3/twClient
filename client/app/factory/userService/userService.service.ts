@@ -9,13 +9,13 @@ namespace twClientApp {
     constructor(public APP_CONF) {
     }
 
-    public getOauthIoServiceId():string {
+    public getUserServiceId():string {
       return this.APP_CONF.userServiceId;
     }
   }
 
   angular.module('twClientApp')
-    .factory('testService', [
+    .factory('userService', [
       'appConfig',
       (APP_CONF)=>{ return new UserController(APP_CONF) }] );
 }
