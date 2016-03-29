@@ -37,7 +37,8 @@ module.exports = function(config) {
     },
 
     ngHtml2JsPreprocessor: {
-      stripPrefix: 'client/'
+      stripPrefix: 'client/',
+      moduleName: 'ngTemplates',
     },
 
     // list of files / patterns to exclude
