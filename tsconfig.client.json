@@ -15,6 +15,7 @@
         "client/app/main/main.rooter.ts",
         "client/components/footer/footer.directive.ts",
         "client/components/login/login.directive.ts",
+        "client/components/navbar/navbar.directive.ts",
         "client/typings/angularjs/angular.d.ts",
         "client/typings/jquery/jquery.d.ts",
         "client/typings/lodash/lodash.d.ts",
