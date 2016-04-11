@@ -12,6 +12,30 @@ namespace twClientApp {
 
     constructor() {
     }
+
+    public getUserId():string {
+      return this.user_id;
+    }
+
+    public getScreenName():string {
+      return this.screen_name;
+    }
+
+    public getOAuthToken():string {
+      return this.screen_name;
+    }
+
+    public setUserId(user_id) {
+      this.user_id = user_id;
+    }
+
+    public setScreenName(screen_name) {
+      this.screen_name = screen_name;
+    }
+
+    public setOAuthToken(o_auth_token) {
+      this.o_auth_token = o_auth_token;
+    }
   }
 
   angular.module('twClientApp')

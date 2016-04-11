@@ -11,6 +11,7 @@
     "files": [
         "client/app/app.ts",
         "client/app/factory/test/testService.service.ts",
+        "client/app/factory/userService/user.ts",
         "client/app/factory/userService/userService.service.ts",
         "client/app/main/main.rooter.ts",
         "client/components/footer/footer.directive.ts",
