@@ -27,11 +27,12 @@ namespace twClientApp {
       localStorage.setItem("o_auth_token", this.user.getOAuthToken());
     };
   }
-}
 
-angular.module('twClientApp').factory(
-  'userService',
-  (user)=>{
-    return new UserService(user)
-  }
-);
+
+  angular.module('twClientApp').factory(
+    'userService',
+    (user)=>{
+      return new UserService(user)
+    }
+  );
+}
